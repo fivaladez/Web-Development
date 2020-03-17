@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <img 
+        srcset="img/dogs.jpg 2x,
+                img/man.jpg 1.5x"
+        src="img/bride.jpg"
+    > -->
+    <picture>
+        <source srcset="img/dogs.jpg" media="(min-width: 800px">
+        <source srcset="img/man.jpg" media="(min-width: 500px">
+            <img src="img/bride.jpg" alt="Una novia">
+    </picture>
+</body>
+</html>

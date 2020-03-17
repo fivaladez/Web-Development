@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <form action="">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <div>
+                <label>
+                    Ingrese su nombre de usuario
+                    <input id="username" name="username"> <!-- Por default type="text"-->
+                </label>
+            </div>
+            <div>
+                <label>
+                    Ingrese su contraseña
+                    <input name="password" type="password">
+                </label>
+            </div> 
+        </fieldset>
+        <div>
+            <label>
+                Ingrese su correo
+                <input name="email" type="email">
+            </label>
+        </div>
+        <div>
+            <label>
+                Fecha de nacimiento
+                <input name="fecha" type="date">
+            </label>
+        </div>
+        <div>
+            <label>
+                Ingrese su telefono
+                <input name="cantidades" type="number">
+            </label>
+        </div>
+        <div>
+            <label>
+                Ingrese su nombre de usuario
+                <input name="username2" placeholder="Ingrese usuario">
+            </label>
+        </div>
+        <fieldset>
+            <legend>Tus pasatiempos</legend>
+            <!-- Multiples opciones -->
+            <label><input type="checkbox">Deporte</label>
+            <label><input type="checkbox">Musica</label>
+            <label><input type="checkbox">Estudiar</label>
+            <label><input type="checkbox">Leer</label>
+        </fieldset>
+        <fieldset>
+            <legend>Tu género</legend>
+            <!-- Opciones unicas -->
+            <label><input type="radio" name="gender">Hombre</label>
+            <label><input type="radio" name="gender">Mujer</label>
+        </fieldset>
+        <!-- <button>Enviar</button> -->
+        <input type="submit" value="Iniciar Sesión">
+    </form>
+    <script>
+        document.getElementById('username').addEventListener('keyup', e => {
+            console.log(e.target.value)
+        })
+    </script>
+</body>
+</html>
