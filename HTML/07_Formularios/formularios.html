@@ -13,13 +13,13 @@
             <div>
                 <label>
                     Ingrese su nombre de usuario
-                    <input id="username" name="username"> <!-- Por default type="text"-->
+                    <input id="username" name="username" required> <!-- Por default type="text"-->
                 </label>
             </div>
             <div>
                 <label>
                     Ingrese su contraseña
-                    <input name="password" type="password">
+                    <input name="password" type="password" required>
                 </label>
             </div> 
         </fieldset>
@@ -60,6 +60,22 @@
             <!-- Opciones unicas -->
             <label><input type="radio" name="gender">Hombre</label>
             <label><input type="radio" name="gender">Mujer</label>
+        </fieldset>
+        <fieldset>
+            <legend>Select y opciones</legend>
+            <label for="country">Escoge tu pais</label>
+            <select name="country" id="country">
+                <optgroup label="America">
+                    <option value="pe">Perú</option>
+                    <option value="co">Colombia</option>
+                    <option value="ve">Venezuela</option>
+                </optgroup>
+                <optgroup label="Europa">
+                    <option value="es">España</option>
+                    <option value="it">Italia</option>
+                </optgroup>
+            </select>
+            <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
         </fieldset>
         <!-- <button>Enviar</button> -->
         <input type="submit" value="Iniciar Sesión">

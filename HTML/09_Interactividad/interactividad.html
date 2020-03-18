@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactividad y contenido embebido</title>
+</head>
+<body>
+    <!-- Modal - Aparece la ventana por encima del conenido -->
+    <dialog id="modal"> 
+        <h2>Curso HTML5 desde cero</h2>
+        <p>Precio: $134</p>
+        <p>Profesor: Alvaro Felipe</p>
+    </dialog>
+    <button id="button">Abrir modal</button>
+    <button id="button2">Cerrar modal</button>
+    <h1>Contenido Interactivo</h1>
+    <details>
+        <summary>HTML</summary>
+        <p>Lenguage de Marcado de Hyper Texto</p>
+    </details>
+    <h1>Contenido embebido</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XEEnzFdLZeY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14934.472048979706!2d-103.32779430274545!3d20.6444212592878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b23706c86a2b%3A0xf5ddd6a2b710ff12!2sPlaza%20Forum%20Tlaquepaque!5e0!3m2!1sen!2smx!4v1584544863658!5m2!1sen!2smx" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    
+    <script>
+        const modal = document.getElementById('modal')
+        const button = document.getElementById('button')
+        const button2 = document.getElementById('button2')
+        button.addEventListener('click', () => {
+            modal.setAttribute('open', 'true')
+        })
+        button2.addEventListener('click', () => {
+            modal.removeAttribute('open')
+        })
+    </script>
+</body>
+</html>
