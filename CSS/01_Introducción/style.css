@@ -1,0 +1,14 @@
+/*Variables*/
+:root {
+    --color: black;
+}
+body {
+    background: var(--color);
+    color: yellow;
+    margin: 10px;
+}
+
+h1 {
+    background: white;
+    color: var(--color);
+}

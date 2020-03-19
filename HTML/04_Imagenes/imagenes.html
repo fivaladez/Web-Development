@@ -6,15 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <img 
-        srcset="img/dogs.jpg 2x,
-                img/man.jpg 1.5x"
+    <!-- <img
         src="img/bride.jpg"
+        srcset="img/man.jpg 1.5x,
+                img/dogs.jpg 2x,"
     > -->
-    <picture>
-        <source srcset="img/dogs.jpg" media="(min-width: 800px">
-        <source srcset="img/man.jpg" media="(min-width: 500px">
-            <img src="img/bride.jpg" alt="Una novia">
-    </picture>
+    <img
+        src="img/bride.jpg"
+        srcset="img/man.jpg 500w,
+                img/dogs.jpg 800w,"
+    >
+    <!-- Condiciones para la imagen, la ultima es la condición  por defecto -->
+    <!-- <picture>
+        <source srcset="img/dogs.jpg" media="(min-width: 800px)">
+        <source srcset="img/man.jpg" media="(min-width: 500px)">
+        <img src="img/bride.jpg" alt="Una novia">
+    </picture> -->
 </body>
 </html>
