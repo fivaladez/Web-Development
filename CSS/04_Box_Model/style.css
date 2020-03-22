@@ -1,0 +1,107 @@
+/* Layout - Geometría de los elementos de la pagina web */
+/* 
+Inline:
+    No crean nuevas lineas
+    No tienen ancho ni alto
+    Se ajustan al contenido
+Bloque
+    Crean nueva linea para cada elemento
+    Ocupan todo el espacio horizontal
+    Tienen ancho y alto
+
+Box Model:
+    Conenido
+    Padding
+    Border
+    Margin
+*/
+h1 {/*h1 es elemento de bloque por naturaleza*/
+    background: yellow;
+    height: 200px;
+    width: 250px;
+    display: inline;/*Anula propiedades height y width*/
+}
+p {
+    display: inline;
+    background: green;
+}
+span {
+    background: blue;
+    height: 100px;
+    width: 100px;
+    display: inline-block;/* Intermedio */
+}
+.box {
+    background: violet;
+    /* Box model */
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    margin: 50px;
+    border: 10px solid black;
+    /* Calcular automaticamente tamaños apartir del border */
+    box-sizing: border-box;
+}
+[class^="box-"] {
+    box-sizing: border-box;
+    background: lime;
+    padding: 50px;
+    width: 50%;
+    margin-left: 50%;
+}
+.box-1 {
+    /* margin-top: 10px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    margin-left: 10px; */
+    /* margin: 10px 50px 10px 50px; */
+    margin: 10px 50px; 
+}
+.parrafo {
+    background: violet;
+}
+.container {
+    width: 200px;
+    background: rgb(42, 136, 165);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.item {
+    margin-left: -8px;
+    margin-right: -8px;
+    border: 1px solid black;
+}
+/* Colapsado de margenes verticales */
+.article {
+    background: grey;
+    margin: 0;
+    display: block;
+    padding-top: 1px;/* Evitas que los margenes colapsen*/
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    background: inherit;
+    display: block;
+    margin: 0;
+}
+.video {
+    display: block;
+    background: yellow;
+    padding-bottom: 56.25%; /*Relativo al ancho*/
+    /* Sirve para hacer video responsive */
+}
+.body {
+    margin: 0;
+    height: 100vh;/*100% view port height*/
+    background: brown;
+}
+.item {
+    width: 90%;
+    /* Solo se le puede aplicar un porcenage a height si el padre (.body) tiene un height no automatico */
+    height: 50%;
+    background: lime;
+    margin: 0;
+}

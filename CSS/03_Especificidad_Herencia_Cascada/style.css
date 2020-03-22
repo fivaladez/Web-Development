@@ -1,0 +1,45 @@
+/* 
+Puntage de especificidad
+tags: 1
+classes: 10
+id: 100
+inline: 1000
+!important 
+*/
+#main .post p {
+    color: red;
+}
+p {
+    color: green;
+}
+div#main .post p {
+    color: blue;
+}
+body div#main .post p {
+    color: purple;
+}
+/* Cascada - Lo que viene después sobrescribe */
+/*
+Entonces, el navegador:
+    1. Decide por importancia (especificidad)
+    2. Decide por quié va al final (cascada)
+*/
+/* Herencia - heredar propiedades */
+a {
+    color: inherit;
+}
+span {
+    font-size: .5em;
+}
+ul {
+    color: purple;
+}
+li {
+    color: initial;
+}
+ul .last{
+    color: inherit;
+}
+li span {
+    font-size: inherit;
+}
