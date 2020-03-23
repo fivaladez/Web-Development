@@ -1,0 +1,84 @@
+/* Pseudo elementos - Buena practica*/
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+.box {
+    width: 200px;
+    height: 100px;
+    color: transparent;
+    background: orange;
+    margin: 50px auto;
+    /* Border es interno - Punteado */
+    /* Ancho Estilo Color */
+    /* border: 20px dotted black; */
+    border-style: solid dotted dashed double;
+    border-width: 10px;
+    border-color: blue green black yellow;
+}
+.box-2 {
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin: 50px auto;
+    /* Width Style Color */
+    /* border-top: 10px solid blue;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent; */
+    border: 100px solid;
+    border-color: blue transparent transparent;
+}
+.box-3 {
+    width: 200px;
+    height: 200px;
+    background: green;
+    margin: 20px auto;
+    border: 5px solid;
+    /* border-radius: 10px; */
+    /* border-top-left-radius: 30px;
+    border-top-right-radius: 55px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 70px; */
+    /* top-left top-right bottom-left bottom-right */
+    border-radius: 25px 55px 5px 80px;
+    /* x y */
+    border-top-right-radius: 55px 150px;
+}
+.youtube {
+    --border-radius-x: 50px;
+    --border-radius-y: 120px;
+    padding-top: 0.1px;
+    width: 200px;
+    height: 150px;
+    background: red;
+    margin: 50px auto;
+    border: 5px solid;
+    /* border-top-left-radius: var(--border-radius-x) var(--border-radius-y);
+    border-top-right-radius: var(--border-radius-x) var(--border-radius-y);
+    border-bottom-left-radius: var(--border-radius-x) var(--border-radius-y);
+    border-bottom-right-radius: var(--border-radius-x) var(--border-radius-y); */
+    border-radius: var(--border-radius-x) / var(--border-radius-y);
+    /* Outline - linea por fuera de la caja */
+    outline: 10px solid yellow;
+}
+.play {
+    width: 80px;
+    height: 80px;
+    border: 40px solid;
+    /* (200-80) / 2 */
+    margin-left: 60px;
+    /* (150-80) / 2 */
+    margin-top: 35px;
+    border-color: transparent transparent transparent white;
+}
+.shadow {
+    width: 100px;
+    height: 100px;
+    background: hsl(10, 90%, 50%);
+    margin: 200px auto;
+    /* Copia de elemento original */
+    /* : h-offset v-offset blur spread color | inset */
+    box-shadow: 20px 20px 10px 5px blue,
+                30px 30px 10px 5px green,
+                40px 40px 10px 5px violet;
+}

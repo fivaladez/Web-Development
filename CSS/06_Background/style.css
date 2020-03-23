@@ -1,0 +1,102 @@
+/* Background */
+* {
+    box-sizing: border-box;
+}
+.box {
+    width: 600px;
+    height: 400px;
+    background-image: url(street.jpg);
+    background-repeat: no-repeat;
+    /* background-repeat: repeat-x;
+    background-repeat: repeat-y; */
+    /*La imagen se empieza a dibujar desde el inicio de la caja*/
+    /* border-box | padding-box | content-box */
+    background-clip: content-box;
+    padding: 50px;
+    border: 5px solid black;
+    margin: 100px auto;
+    box-shadow: 0 10px 20px -10px #000;
+    border-radius: 10px;
+}
+.box-2 {
+    width: 600px;
+    height: 400px;
+    background-image: url(street.jpg);
+    background-repeat: no-repeat;
+    /* Se empieza a dibujar desde el inicio que le indiques */
+    background-origin: content-box;
+    padding: 50px;
+    border: 5px solid black;
+    margin: 100px auto;
+    box-shadow: 0 10px 20px -10px #000;
+    border-radius: 10px;
+    /* max size hwere the image is complete */
+    background-size: contain;
+}
+.box-3 {
+    width: 600px;
+    height: 400px;
+    background-image: url(street.jpg);
+    background-repeat: no-repeat;
+    /* Se empieza a dibujar desde el inicio que le indiques */
+    background-origin: content-box;
+    padding: 50px;
+    border: 5px solid black;
+    margin: 100px auto;
+    box-shadow: 0 10px 20px -10px #000;
+    border-radius: 10px;
+    /* try to fill it all */
+    background-size: cover;
+}
+.box-4 {
+    width: 600px;
+    height: 400px;
+    background-image: url(street.jpg);
+    background-repeat: no-repeat;
+    /* Se empieza a dibujar desde el inicio que le indiques */
+    background-origin: content-box;
+    padding: 50px;
+    border: 5px solid black;
+    margin: 100px auto;
+    box-shadow: 0 10px 20px -10px #000;
+    border-radius: 10px;
+    /* image original size*/
+    background-size: auto;
+}
+.box-5 {
+    width: 600px;
+    height: 400px;
+    background-image: url(street.jpg);
+    background-repeat: no-repeat;
+    /* Se empieza a dibujar desde el inicio que le indiques */
+    margin: 100px auto;
+    background-color: yellow;
+    border: 10px solid black;
+    background-size: 50%;
+    /* x(y=center), x y */
+    /* left/center/right, top/center/bottom */
+    /* background-position: 100px; */
+    background-position: bottom 20px right 20px;
+}
+body {
+    padding-bottom: 200em;
+    /* Se puede tener multi imagenes de background */
+    background-image: url(tiger.jpg);
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.box-6 {
+    width: 600px;
+    height: 400px;
+    margin: 100px auto;
+    border: 5px solid black;
+    background-image: url(street.jpg),
+                      url(tiger-2.jpg);
+    background-repeat: no-repeat;
+    background-size: 30%, contain;
+    background-position: bottom 20px right 20px, center;
+    /* position / size repeat attachment origin clip */
+    /* background: url(street.jpg) bottom 20px right 20px / 30% no-repeat, url(tiger-2.jpg) center / contain no-repeat; */
+}
