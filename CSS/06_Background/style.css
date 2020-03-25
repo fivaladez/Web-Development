@@ -15,6 +15,7 @@
     padding: 50px;
     border: 5px solid black;
     margin: 100px auto;
+    /* inicio_x inicio_y blured spread color */
     box-shadow: 0 10px 20px -10px #000;
     border-radius: 10px;
 }

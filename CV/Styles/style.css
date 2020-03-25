@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 1200px;
+    height: auto;
+    border: 1px solid black;
+    margin: 10px auto 100px auto;
+    /* padding-bottom: 56.25%; */
+}
+.Title-name {
+    font-size: 50px;
+    width: auto;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 5%;
+    /* background-color: aqua; */
+    background-attachment: fixed;
+    text-align: center;
+    box-shadow: 0 10px 20px -10px black;
+}
+.summary {
+    font-size: 20px;
+    width: 70%;
+    border: 1px solid red;
+    display: inline-block;
+}
+.contact-info {
+    font-size: 20px;
+    width: 25%;
+    border: 1px solid green;
+    display: inline-block;
+    margin: 1px 20px;
+}
+.experience {
+    width: 70%;
+    border: 1px solid blue;
+    display: inline-block;
+}
+.job-role {
+    font-style: italic;
+}
+.job-duration {
+    font-size: 18px;
+}
+.job-description {
+    font-size: 20px;
+}
+.tech-skills {
+    width: 25%;
+    border: 1px solid green;
+    display: inline-block;
+    margin: 1px 20px;
+}
+.skills {
+    font-size: 25px;
+}
