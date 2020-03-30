@@ -5,8 +5,14 @@ body {
     width: 1200px;
     height: auto;
     border: 1px solid black;
-    margin: 10px auto 100px auto;
+    margin: 20px auto 100px auto;
+    font-family: sans-serif;
+    word-spacing: .5em;
+    letter-spacing: .1em;
     /* padding-bottom: 56.25%; */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: serif;
 }
 .Title-name {
     font-size: 50px;
@@ -17,6 +23,7 @@ body {
     /* background-color: aqua; */
     background-attachment: fixed;
     text-align: center;
+    line-height: 70px;
     box-shadow: 0 10px 20px -10px black;
 }
 .summary {
@@ -24,6 +31,7 @@ body {
     width: 70%;
     border: 1px solid red;
     display: inline-block;
+    word-break: break-all;
 }
 .contact-info {
     font-size: 20px;
@@ -31,27 +39,33 @@ body {
     border: 1px solid green;
     display: inline-block;
     margin: 1px 20px;
+    word-break: break-all;
 }
 .experience {
     width: 70%;
+    height: 90%;
     border: 1px solid blue;
     display: inline-block;
+    word-break: break-all;
 }
 .job-role {
     font-style: italic;
 }
 .job-duration {
-    font-size: 18px;
+    font-size: 16px;
 }
 .job-description {
     font-size: 20px;
 }
 .tech-skills {
     width: 25%;
+    height: 90%;
     border: 1px solid green;
     display: inline-block;
     margin: 1px 20px;
+    word-break: break-all;
+    line-height: ;
 }
 .skills {
-    font-size: 25px;
+    font-size: 22px;
 }

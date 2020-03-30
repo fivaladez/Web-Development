@@ -1,0 +1,87 @@
+/* Best practice for Box modeling */
+* {
+    box-sizing: border-box;
+}
+/* Unidades em y rem 
+em - tamaño fuente de contexto
+rem - tamaño fuente root
+*/
+/* Alinear texto */
+p {
+    /* direction: ltr; */
+    text-indent: 2em;
+    /* start|end  left center right justify*/
+    text-align: right;
+    line-height: 1.5em;
+}
+.align-1 {
+    display: inline-block;
+    --height: 200px;
+    width: var(--height);
+    height: var(--height);
+    background: teal;
+    text-align: center;
+    /* Para alinear verticalmente */
+    line-height: var(--height);
+}
+.align-2 {
+    display: inline-block;
+    --height: 200px;
+    width: var(--height);
+    height: var(--height);
+    background: yellow;
+    text-align: center;
+    /* Syntax: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length> */
+   vertical-align: middle;
+}
+/* Flujo de texto */
+.align-3 {
+    display: inline-block;
+    --height: 200px;
+    width: 500px;
+    height: var(--height);
+    background: aqua;
+    text-align: center;
+    letter-spacing: 1em;
+    word-spacing: 2em;
+}
+/* Decoration */
+.link {
+    /* text-decoration-line: line-through;
+    text-decoration-color: red;
+    text-decoration-style: dotted; */
+    text-decoration: line-through red dotted;
+}
+/* Shadow */
+.align-4 {
+    margin: 5em auto;
+    text-align: center;
+    /* x y blure color */
+    text-shadow: 2em 2em 2px red,
+                 1em 1em 5px blue;
+}
+/* White-space y desbordamiento */
+.whitespaces {
+    /* Syntax: normal | pre | nowrap | pre-wrap | pre-line | break-spaces */
+    white-space: pre;
+}
+.desbordamiento {
+    width: 60px;
+    margin: 2em auto;
+    border: 2px solid black;
+    /* Dividen el texto cuando llega al final de la caja */
+    /* word-break: break-all; */
+    /* word-wrap: break-word; */
+    /* Ocultar sobrante y agregar puntos suspensivos */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Texto vertical */
+.vertical-text {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+/* Transformación de texto */
+.transform {
+    text-transform: uppercase;
+}

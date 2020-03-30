@@ -1,0 +1,47 @@
+/* Best practice for Box modeling */
+* {
+    box-sizing: border-box;
+}
+/* Font-family */
+/* 
+Familiar tupograficas genericas:
+    serif
+    sans-serif
+    monospace
+    cursive
+    display
+*/
+.font-size {
+    font-size: 3em;
+    /* font-family: sans-serif; */
+    /* font-family: monospace; */
+    /* Poner varios tipos como respaldo si no se encuentra alguna */
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Font-weight - grosor de trasos y font-style*/
+.font-weight {
+    font-size: 4rem;
+    /* normal| bold | lighter | bolder -> No usar. Hay tipografias que no tienen estas opciones*/
+    /* 400 ... 700 ... 900 */
+    font-weight: 400;
+    font-style: italic;
+    font-variant: small-caps;
+    /* fon-family font-size / line-height */
+    font: 5em / 1.5 verdana;
+    background: yellow;
+    width: 8em;
+    height: 4em;
+    line-height: 4em;
+    text-align: center;
+}
+/* 
+Para obetener fuentes de otros lados puedes usar esta estructura
+@font-face {
+    font-family: nombre;
+    font-weight: value;
+    font-style: value;
+    src: local(font), local(font2), url(path), format(woff2);
+} 
+También puedes ie a https://fonts.google.com/ y copiar el link, en html, que te genera al selecionar una familia
+*/

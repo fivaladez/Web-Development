@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 09 - Pseudoclases</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="Header">
+        <h1>Pseudoclases</h1>
+        <p>Estilos especiales dependiendo del contexto, posición o estado.</p>
+    </header>
+    <main class="Main">
+        <article>
+            <h2><code>:root</code></h2>
+            <p>Pseudoclase que selecciona el elemento raíz de un documento. Identico al selector "html" excepto que su nivel de especificidad es mayor. También usado para crear variables.</p>
+        </article>
+        <article>
+            <h2><code>:hover</code></h2>
+            <p>Pseudoclase que se presenta cuando el usuario coloca el puntero sobre algún elemento, pero no necesariamente está activo.</p>
+        </article>
+        <article>
+            <h2><code>:active</code></h2>
+            <p>Pseudoclase que cubre el caso en el que un elemento está siendo activado por el usuario. Cuando se interactua con el ratón ... el momento en el que el usuario presiona el botón del ratoón hasta el momento en el que lo suelta. A menudo usado en elementos.</p>
+            <ol>
+                El orden SI importa:
+                <li><code>:link { ... }</code></li>
+                <li><code>:visited { ... }</code></li>
+                <li><code>:hover { ... }</code></li>
+                <li><code>:active { ... }</code></li>
+            </ol>
+        </article>
+        <article>
+            <h2><code>:target</code></h2>
+            <p>Pseudoclase representa el elemento único, si existe alguno, con un id coincidente con el identificador de fragmentos de la URL del documento.</p>
+            <p> 
+                <!-- Referencia a id modal -->
+                <a href="#modal">Modal con CSS</a>
+            </p>
+        </article>
+        <div id="modal" class="Modal">
+            <aside class="Modal-box">
+                <h2>Hola, soy un modal con CSS</h2>
+                <form action="">
+                    <input type="email" placeholder="email">
+                    <input type="password" placeholder="password">
+                    <input type="submit">
+                </form>
+                <a href="#">cerrar</a>
+            </aside>
+        </div>
+        <article>
+            <h2><code>:nth-child :first-child :last-child</code></h2>
+            <ul>
+                <li>
+                    <code>ntr-child</code>: seleciona el elemento indicado que sea el enésimo hijo de su elemento padre.
+                </li>
+                <li>
+                    <code>first-child</code>: seleciona el elemento indicado que sea el primer hijo de su elemento padre.
+                </li>
+                <li>
+                    <code>last-child</code>: seleciona el elemento indicado que sea el último hijo de su elemento padre.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2><code>:nth-of-type :first-of-type :last-of-type</code></h2>
+            <ul>
+                <li>
+                    <code>nth-of-type</code>: seleciona el elemento indicado que sea el enésimo hijo en su tipo sin importar la jerarquia dentro del elemento padre.
+                </li>
+                <li>
+                    <code>first-of-type</code>: seleciona el elemento indicado que sea el primer hijo en su tipo sin importar la jerarquia dentro del elemento padre.
+                </li>
+                <li>
+                    <code>last-of-type</code>: seleciona el elemento indicado que sea el último hijo en su tipo sin importar la jerarquia dentro del elemento padre.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2><code>:not</code></h2>
+            <p>Pseudoclase de negación, :not(X) es una notación funcional que toma un selector simple X como argumento. Coincide con un elemento que no está representado por el argumento. X no debe contener otro selector de negación</p>
+        </article>
+        <article>
+            <h2><code>:empty</code></h2>
+            <p></p>
+            <p></p>
+            <p>Pseudoclase corresponde a un elemento sin ningún nodeo hijo. Sólo cuando hay nodos de elemento o texto con uno o más caracteres dentro del elemento ése de convierte en no vacío.</p>
+        </article>
+    </main>
+    
+</body>
+</html>
