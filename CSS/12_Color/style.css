@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+/* 
+Modelos de color
+    subsabstrivo - absorven luz
+    aditivo - suma luz 
+*/
+.rgb {
+    /* RGBa - 0-255 - a=transparenca */
+    background: rgba(40, 40, 40, .5);
+    /* Hexadecimal - Sigue siendo RGB */
+    /* RRGGBB - #AA00EE = #A0E*/
+    color: #FFFF00;
+}
+/*
+HSL
+    Hue - tonalidad de color 0 - 360 -> CIRCULO CROMATICO
+    Saturación - Intensidad de color 0-100%
+    Luminosidad - 0% negro, 50% puro, 100% blanco
+*/
+.hsl{
+    background: hsla(180, 100%, 40%, .5);
+}
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(
+        hsl(0,100%,50%),
+        hsl(30,100%,50%),
+        hsl(60,100%,50%),
+        hsl(90,100%,50%),
+        hsl(120,100%,50%),
+        hsl(150,100%,50%),
+        hsl(180,100%,50%),
+        hsl(210,100%,50%),
+        hsl(240,100%,50%),
+        hsl(270,100%,50%),
+        hsl(300,100%,50%),
+        hsl(330,100%,50%),
+        hsl(360,100%,50%)
+    );
+}
+.gradient-linear {
+    /* Angulos y Stops */
+    height: 20vh;
+    width: 80vw;
+    /* background-image: linear-gradient(90deg, red 10%, yellow 40%); */
+    background-image: linear-gradient(to top right, red 10%, yellow 40%);
+}
+.gradient-radial {
+    /* Angulos y Stops */
+    height: 20vh;
+    width: 80vw;
+    /* background-image: radial-gradient(yellow, red, green, blue); */
+    background-image: radial-gradient(at -20% -30%, yellow, red, green, blue);
+}
+.yin-yang {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 2em auto;
+    background: 
+    radial-gradient(circle at 50% 25%, black 5%, transparent 5%),
+    radial-gradient(closest-side circle at 50% 25%, white 100%, transparent 100%),
+    radial-gradient(circle at 50% 75%, white 5%, transparent 5%),
+    radial-gradient(closest-side circle at 50% 75%, black 100%, transparent 100%),
+    linear-gradient(to right, white 50%, black 50%)
+    ;
+}
