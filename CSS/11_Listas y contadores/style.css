@@ -1,0 +1,49 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+span {
+    display: list-item;
+    border: 1px solid black;
+}
+/* 
+list-style-type
+list-style-image
+list-style-position
+list-style
+*/
+ul, ol {
+    list-style-type: lower-alpha;
+    /* list-style-image: url(); No usar */
+    border: 1px solid black;
+    padding: 20px;
+    width: 80%;
+    margin: 2% auto;
+    list-style-position: inside;
+}
+li {
+    border: 1px solid blue;
+    margin-bottom: 5px;
+}
+.chapters {
+    counter-reset: chapters;
+}
+.chapter {
+    counter-increment: chapter;
+}
+.chapter::before {
+    content: counter(chapter) '.';
+    color: red;
+    margin-right: .5em;
+}
+.lists {
+    counter-reset: list;
+}
+.list {
+    counter-increment: list;
+    list-style: none;
+}
+.list::before {
+    content: counters(list, '.') '. ';
+    color: red;
+    font-size: .75em;
+}

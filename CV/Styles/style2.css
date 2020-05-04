@@ -1,7 +1,7 @@
-* {
+*, *::before, *::after{
     box-sizing: border-box;
     /* border: 1px solid black; */
-    word-break: break-all;
+    word-break: break-word;
     word-spacing: .2em;
     letter-spacing: .08em;
 }
@@ -9,25 +9,45 @@
     --margin-percent: 2%;
 }
 body {
-    width: 90%;
+    width: 90vw;
     margin: var(--margin-percent) auto;
     font-family: sans-serif;
     border: 1px solid black;
+    background-color: #ccc;
+    display: block;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: serif;
 }
 .title {
-    font-size: 2em;
-    margin: var(--margin-percent) var(--margin-percent) 0 var(--margin-percent);
+    font-size: 2.5em;
+    margin: var(--margin-percent);
+    border: 1px solid black;
+}
+.main {
+    margin: var(--margin-percent);
+    border: 1px solid black;
+    position: relative;
 }
 .summary {
-    display: inline-block;
-    margin: 0 1% 0 var(--margin-percent);
     width: 70%;
+    /* border: 1px solid black; */
 }
 .info {
-    display: inline-block;
-    margin: 0 var(--margin-percent) 0 1%;
-    width: 22%;
+    width: 28%;
+    padding-left: 1em;
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.experience {
+    width: 70%;
+}
+.tech-skills {
+    width: 28%;
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 20%;
+    right: 0;
 }

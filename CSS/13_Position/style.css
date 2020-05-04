@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+/* Flujo: Que los elementos se acomoden en el navegador 
+    como aparecen en el código */
+
+/* 
+position: static | relative | absolute | fixed | stiky
+- statick: sigue flujo normal. No es posicionado segun el borde indicado
+Propiedades offset:
+    Mueven elemento posicionado: top, right, bottom, left
+*/
+h1 {
+    /* Conservar el espacio reservado del elemento h1 */
+    opacity: 0;
+}
+.p1 {
+    color: red;
+    float: left;
+    width: 50%;
+}
+.p2 {
+    color: green;
+    float: right;
+    width: 50%;
+}
+.p3 {
+    color: blue;
+}
+/* 
+position: relative
+- Su referencia es su posición inicial
+- Al moverlo, con las propoedades offset, reserva su espacio
+*/
+.pos-relative {
+    position: relative;
+    top: 10px;
+}
+/* 
+position: absolute
+- Pierde su posición en el flujo
+- No reserva su espacio
+- Si tenía dimensiones fijas, se mantienen
+- Si tenía dimensiones automaticas, se ajustan a contenido
+- Su referencia es su ancestro posicionado más cercano
+*/
+.pos-absolute {
+    /* background-color: lime; */
+    position: relative;
+    top: 10px;
+}
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+}
+.box span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    right: 0;
+    bottom: 0;
+}
+.menu {
+    border: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    background-color: #333;
+}
+.submenu {
+    border: none;
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+.menu-item {
+    border: none;
+    position: relative;
+}
+.menu-item:hover {
+    background-color: rgba(0,0,0,.5);
+}
+.menu-item:hover .submenu{
+    display: block;
+}
+.menu-link {
+    border: none;
+    text-decoration: none;
+    color: #ddd;
+    display: block;
+    padding: .5em 1em;
+}
